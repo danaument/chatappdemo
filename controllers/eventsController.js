@@ -1,5 +1,4 @@
 const db = require("../models");
-const { search } = require("../routes");
 const moment = require("moment");
 
 const success = { status: "ok" };
@@ -41,6 +40,21 @@ module.exports = {
 
   summary: function (req, res) {
     console.log(JSON.stringify(req.query, null, 2));
+    console.log(req.query.by);
+    let timeframe;
+    switch (req.query.by) {
+      case "minute":
+        timeframe = "$minute"
+        break;
+      case "hour":
+        timeframe = "$hour"
+        break;
+      case "day":
+        timeframe = "$dayOfYear"
+        break;
+      default:
+        timeframe = "$hour"
+    }
     db.Event.aggregate([
       {
         $match: {
@@ -53,7 +67,7 @@ module.exports = {
       {
         $group: {
           _id: {
-            date: { $minute: "$date" },
+            date: { timeframe: "$date" },
           },
           enters: "",
           leaves: "",

@@ -1,10 +1,12 @@
 {
-  "name": "BackendChallenge",
+  "name": "chatappdemo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "seed": "node scripts/seedDB.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +15,7 @@
     "axios": "^0.21.1",
     "express": "^4.17.1",
     "moment": "^2.29.1",
-    "mongoose": "^5.12.9"
+    "mongoose": "^5.12.9",
+    "nodemon": "^2.0.7"
   }
 }
