@@ -67,7 +67,7 @@ My goal for this project was to create a very lightweight backend server that co
 
 I ran into a significant obstacle with the aggregation/summary route.  I spent a considerable amount of time reading MongoDB documentation on the aggregation pipeline and the various operators.  I made use of [Mongo Playground](https://mongoplayground.net/) to try out different queries.  I considered starting over with Sequelize/MySQL and something like [this approach](https://stackoverflow.com/questions/35073918/sequelize-grouping-by-date-disregarding-hours-minutes-seconds/54116200) but decided that I was at least satisfied with my approach (and wanted to see if anyone reviewing this app could point me in the right direction).
 
-I did not implement any tests for this application.  I have used Jest in the past, but only to test simple functions ([see an example here](https://github.com/jeishu/dungeon_scribe/tree/main/test) from a past project).  I look forward to learning how to write tests for API routes.
+I did not implement any tests for this application.  I have used Jest in the past, but only to test simple functions ([see an example here](https://github.com/jeishu/dungeon_scribe/tree/main/test) from a past project).  I look forward to learning how to write tests for API routes.  I used Postman to manually test all of my routes.
 
 
 ## Questions
